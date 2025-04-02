@@ -3,10 +3,13 @@
   "builds": [
     {
       "src": "client/package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/create-react-app",
       "config": {
         "distDir": "build",
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "public": "public",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build"
       }
     }
   ],
